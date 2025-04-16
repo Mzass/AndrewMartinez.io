@@ -58,8 +58,8 @@ function iniciarModelo3D(containerId, modelPath) {
 }
 
 // 👇 Inicializamos los dos modelos correctamente
-iniciarModelo3D('contenedor-3d-github', '/models/github.glb');
-iniciarModelo3D('contenedor-3d-linkedin', '/models/linkedin.glb');
+iniciarModelo3D('contenedor-3d-github', 'https://mzass.github.io/AndrewMartinez.io/models/github.glb');
+iniciarModelo3D('contenedor-3d-linkedin', 'https://mzass.github.io/AndrewMartinez.io/models/linkedin.glb');
 
 
 
