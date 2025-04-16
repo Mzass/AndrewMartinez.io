@@ -63,27 +63,6 @@ iniciarModelo3D('contenedor-3d-linkedin', './models/linkedin.glb');
 
 
 
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleBtn = document.querySelector(".theme-toggle");
-
-  toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-
-    // Alterna el ícone da lua / sol (opcional)
-    const icon = toggleBtn.querySelector("i");
-    if (document.body.classList.contains("dark-mode")) {
-      icon.classList.remove("fa-moon");
-      icon.classList.add("fa-sun");
-    } else {
-      icon.classList.remove("fa-sun");
-      icon.classList.add("fa-moon");
-    }
-  });
-});
-
-
 // Script extra para guardar foto y mantenerla seleccionada tras recarga (opcional con localStorage)
 document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.querySelector(".toggle-gallery");

@@ -1,3 +1,5 @@
+
+
 /* === BASE === */
 * {
   margin: 0;
@@ -9,7 +11,7 @@
 body {
   background-color: #f4f3f8;
   color: #333;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;  
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -373,13 +375,20 @@ body.dark-mode .sidebar-right {
 }
 
 body.dark-mode .theme-toggle {
-  background-color: #2b2b2b;
-  color: #fff;
+  background-color: #2a2a2a;
+  border-color: #555;
+  color: var(--color-text-dark);
+}
+
+body.dark-mode .theme-toggle:hover {
+  background-color: #3c3c3c;
+  border-color: #aaa;
 }
 
 body.dark-mode .floating-menu a {
-  background-color: #2b2b2b;
-  color: #fff;
+  background-color: #2a2a2a;
+  color: var(--color-text-dark);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.04);
 }
 
 body.dark-mode .floating-menu a:hover {
