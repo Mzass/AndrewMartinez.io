@@ -58,8 +58,9 @@ function iniciarModelo3D(containerId, modelPath) {
 }
 
 // 👇 Inicializamos los dos modelos correctamente
-iniciarModelo3D('contenedor-3d-github', 'models/github.glb');
-iniciarModelo3D('contenedor-3d-linkedin', 'models/linkedin.glb');
+iniciarModelo3D('contenedor-3d-github', '/models/github.glb');
+iniciarModelo3D('contenedor-3d-linkedin', '/models/linkedin.glb');
+
 
 
 
@@ -82,12 +83,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// Script extra para guardar foto y mantenerla seleccionada tras recarga (opcional con localStorage)
 document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.querySelector(".toggle-gallery");
   const gallery = document.querySelector(".photo-gallery");
   const mainPhoto = document.getElementById("main-photo");
   const photoOptions = document.querySelectorAll(".gallery-photo");
   const saveBtn = document.querySelector(".save-photo-btn");
+
+  // Cargar foto guardada si existe
+  const savedPhoto = localStorage.getItem("selectedPhoto");
+  if (savedPhoto) {
+    mainPhoto.setAttribute("src", savedPhoto);
+  }
 
   toggleBtn.addEventListener("click", () => {
     gallery.classList.toggle("hidden");
@@ -102,7 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   saveBtn.addEventListener("click", () => {
     const selectedPhoto = mainPhoto.getAttribute("src");
-    alert(`✅ Información y foto guardadas:\nFoto seleccionada: ${selectedPhoto}`);
-    // Aqui podrías hacer un fetch POST al backend si lo deseas
+    localStorage.setItem("selectedPhoto", selectedPhoto);
+    alert(`✅ Foto guardada correctamente.`);
+    location.reload();
   });
 });

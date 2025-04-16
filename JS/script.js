@@ -20,6 +20,14 @@ document.addEventListener('DOMContentLoaded', function () {
       link.click();
       document.body.removeChild(link);
     });
+
+      // Actualiza la foto del index si hay una guardada
+  const savedPhoto = localStorage.getItem("selectedPhoto");
+  const indexPhoto = document.getElementById("index-main-photo");
+  if (savedPhoto && indexPhoto) {
+    indexPhoto.src = savedPhoto;
+  }
+
   });
   
 
