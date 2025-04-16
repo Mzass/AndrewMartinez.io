@@ -1,0 +1,398 @@
+/* === BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f4f3f8;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.profile-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f4f3f8;
+}
+
+.profile-card {
+  width: 100%;
+  background: white;
+  padding: 60px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.avatar-left {
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-left img#main-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #f39c12;
+}
+
+.avatar-left .edit-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #f39c12;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.avatar-left .edit-btn:hover {
+  background-color: #e67e22;
+}
+
+.avatar-left .edit-btn i {
+  font-size: 12px;
+}
+
+/* === GALERIA DE FOTOS VERTICAL COM SCROLL === */
+.photo-gallery {
+  margin-top: 15px;
+  max-height: 685px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  scroll-behavior: smooth;
+  padding-right: 6px;
+  padding-top: 10px;
+  margin-left: 10px;
+}
+
+.gallery-scroll{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+} 
+.photo-gallery::-webkit-scrollbar {
+  width: 6px;
+}
+
+.photo-gallery::-webkit-scrollbar-thumb {
+  background-color: #f39c12;
+  border-radius: 6px;
+}
+
+.photo-gallery::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.gallery-photo {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border: 5px solid #f39c12;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.hidden {
+  display: none;
+}
+
+/* Botão Guardar Foto */
+.save-photo-btn {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-photo-btn:hover {
+  background-color: #e67e22;
+}
+
+/* Dark mode */
+body.dark-mode .save-photo-btn {
+  background-color: #f39c12;
+  color: #000;
+}
+
+body.dark-mode .save-photo-btn:hover {
+  background-color: #e67e22;
+}
+
+.profile-form {
+  flex: 1;
+}
+
+.profile-form h2 {
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 10px;
+  border: 1px solid #f39c12;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border: 1px solid #f39c12;
+  box-shadow: 0 0 5px rgba(243, 156, 18, 0.4);
+}
+
+input[readonly],
+textarea[readonly] {
+  background-color: #f9f9f9;
+  color: #333;
+  border: 1px solid #f39c12;
+  cursor: not-allowed;
+}
+
+textarea[readonly] {
+  resize: none;
+  overflow: hidden;
+  height: 90px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #e67e22;
+}
+
+.horizontal-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* === SIDEBAR === */
+.sidebar-right {
+  background-color: #fafafa;
+  padding: 25px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  gap: 8rem;
+}
+
+.theme-toggle {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  color: #000;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background-color: #eee;
+  border-color: #aaa;
+}
+
+.floating-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+
+.floating-menu a {
+  background-color: #fff;
+  color: #000;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.floating-menu a:hover {
+  background-color: #f39c12;
+  color: #fff;
+}
+
+/* === REDES === */
+.redes_sociales label {
+  font-weight: bold;
+}
+
+.social-wrapper {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.modelo-con-nombre {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 2px solid #f39c12;
+  padding: 4px 14px;
+  border-radius: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s;
+}
+
+.modelo-con-nombre:hover {
+  transform: scale(1.03);
+}
+
+#contenedor-3d-github,
+#contenedor-3d-linkedin {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+
+.link {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+}
+
+/* === DARK MODE === */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+body.dark-mode .profile-page {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .profile-card,
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea,
+body.dark-mode .form-group input[readonly],
+body.dark-mode .form-group textarea[readonly] {
+  background-color: #2b2b2b;
+  color: #eee;
+}
+
+body.dark-mode input[readonly],
+body.dark-mode textarea[readonly] {
+  background-color: #2a2a2a;
+  color: #ccc;
+}
+
+body.dark-mode .sidebar-right {
+  background-color: #161616;
+}
+
+body.dark-mode .theme-toggle {
+  background-color: #2b2b2b;
+  color: #fff;
+}
+
+body.dark-mode .floating-menu a {
+  background-color: #2b2b2b;
+  color: #fff;
+}
+
+body.dark-mode .floating-menu a:hover {
+  background-color: #f39c12;
+  color: #000;
+}
+
+body.dark-mode .modelo-con-nombre {
+  background-color: #1f1f1f;
+  border-color: #f39c12;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .modelo-con-nombre .link {
+  color: #f39c12;
+}

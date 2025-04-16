@@ -1,0 +1,378 @@
+/* Reset y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-color: #f4f3f8;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+  }
+  
+  /* Modo oscuro */
+/* 🎯 Modo Oscuro Refinado */
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+body.dark-mode .sidebar,
+body.dark-mode .sidebar-right {
+  background-color: #1b1b1b;
+  color: #f5f5f5;
+}
+
+body.dark-mode .main-content {
+  background-color: #2d2d2d;
+  color: #f5f5f5;
+}
+body.dark-mode .main-content .intro {
+  background-color: #393939;
+  color: #f5f5f5;
+}
+
+body.dark-mode .intro p {
+  margin: 20px 0;
+  color: #a3a3a3;
+  max-width: 600px;
+  font-size: 16px;
+}
+
+
+/* 🌟 Títulos e textos principais */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode .intro span {
+  color: #ffffff;
+}
+
+body.dark-mode .intro strong,
+body.dark-mode .bar-fill,
+
+body.dark-mode .download-cv,
+body.dark-mode .info strong {
+  background-color: #f39c12;
+  color: #1e1e1e;
+}
+
+/* Hover botones principales */
+
+body.dark-mode .download-cv:hover {
+  background-color: #ffa726;
+  color: #000;
+}
+
+/* 🟫 Barras */
+body.dark-mode .bar {
+  background-color: #2c2c2c;
+}
+
+body.dark-mode .bar-fill {
+  background-color: #f39c12;
+}
+
+/* 🌓 Botón de modo claro/oscuro */
+body.dark-mode .theme-toggle {
+  background-color: #2a2a2a;
+  border-color: #555;
+  color: #f5f5f5;
+}
+
+body.dark-mode .theme-toggle:hover {
+  background-color: #3c3c3c;
+  border-color: #aaa;
+}
+
+/* 🟤 Menú lateral de íconos */
+body.dark-mode .floating-menu a {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.04);
+}
+
+body.dark-mode .floating-menu a:hover {
+  background-color: #f39c12;
+  color: #1e1e1e;
+}
+
+/* 👤 Ícones sociais */
+body.dark-mode .social a {
+  color: #aaa;
+}
+
+body.dark-mode .social a:hover {
+  color: #f39c12;
+}
+
+/* 📋 Lista de skills extra */
+body.dark-mode .extra-skills ul {
+  color: #ccc;
+}
+
+/* 🧱 Divisores */
+body.dark-mode .profile,
+body.dark-mode .info,
+body.dark-mode .languages,
+body.dark-mode .skills,
+body.dark-mode .extra-skills {
+  border-bottom: 3px solid #2c2c2c;
+}
+
+  
+  
+  /* Contenedor principal */
+  .container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  
+  /* Sidebar (izquierda) */
+  .sidebar {
+    width: 300px;
+    background-color: #fafafa;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Perfil */
+  .profile {
+    text-align: center;
+    border-bottom: 3px solid #f1f0f6;
+  }
+  
+  .profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .profile h2 {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  
+  .profile p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px 0px 15px 0;
+  }
+
+  
+  .social a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #555;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .social a:hover {
+    color: #f39c12;
+  }
+  
+  /* Info & habilidades */
+  .info {
+    padding: 15px 0px;
+    text-align: left;
+    border-bottom: 3px solid #f1f0f6;
+  }
+
+  .info strong{
+    padding: 0px 4px;
+    background-color: #f39c12;
+    font-weight: bold;
+    color: #000;
+  }
+  .info p{
+    display: flex;
+    justify-content: space-between;
+  }
+  .info p,
+  .languages p,
+  .skills p {
+    margin: 6px 0;
+    font-size: 14px;
+  }
+  
+  .languages,
+  .skills,
+  .extra-skills {
+    padding: 15px;
+    border-bottom: 3px solid #f1f0f6;
+  }
+
+  .bar-group p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.bar {
+  width: 100%;
+  height: 6px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: #f39c12;
+  border-radius: 10px;
+}
+
+  .extra-skills h3 {
+    margin-bottom: 8px;
+  }
+  
+  .extra-skills ul {
+    list-style-type: square;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .download-cv {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .download-cv:hover {
+    background-color: #e67e22;
+  }
+  
+  /* Columna principal */
+  .main-content {
+    background-color: #f1f0f6;
+    flex: 1;
+    padding: 80px 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .main-content .intro{
+    width: auto;
+    height: auto;
+    background-color: #fafafa;
+    padding: 20px;
+  }
+  .intro h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  
+  .intro span {
+    color: #222;
+  }
+  
+  .intro strong {
+    color: #f39c12;
+  }
+  
+  .intro p {
+    margin: 20px 0;
+    color: #666;
+    max-width: 600px;
+    font-size: 16px;
+  }
+  
+
+
+/* Sidebar derecha */
+.sidebar-right {
+    background-color: c;
+    padding: 25px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    gap: 8rem;
+  }
+  
+  /* Botón modo claro/oscuro */
+  .theme-toggle {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    color: #333;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .theme-toggle:hover {
+    background-color: #eee;
+    border-color: #aaa;
+  }
+  
+  /* Botones flotantes redondos */
+  .floating-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+  }
+  
+  .floating-menu a {
+    background-color: #fff;
+    color: #333;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .floating-menu a:hover {
+    background-color: #f39c12;
+    color: #fff;
+  }
+
+
