@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
   saveBtn.addEventListener("click", () => {
     const selectedPhoto = mainPhoto.getAttribute("src");
     localStorage.setItem("selectedPhoto", selectedPhoto);
-    alert(`✅Gguardado correctamente.`);
+    alert(`✅Guardado correctamente.`);
     location.reload();
   });
 });
