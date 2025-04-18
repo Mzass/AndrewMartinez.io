@@ -107,15 +107,11 @@ body.dark-mode .social a:hover {
   color: var(--color-accent);
 }
 
-body.dark-mode .extra-skills ul {
-  color: #ccc;
-}
 
 body.dark-mode .profile,
 body.dark-mode .info,
 body.dark-mode .languages,
-body.dark-mode .skills,
-body.dark-mode .extra-skills {
+body.dark-mode .skills {
   border-bottom: 3px solid #2c2c2c;
 }
 
@@ -206,8 +202,7 @@ body.dark-mode .extra-skills {
 }
 
 .languages,
-.skills,
-.extra-skills {
+.skills{
   padding: 15px;
   border-bottom: 3px solid var(--color-content-light);
 }
@@ -234,16 +229,6 @@ body.dark-mode .extra-skills {
   border-radius: 10px;
 }
 
-.extra-skills h3 {
-  margin-bottom: 8px;
-}
-
-.extra-skills ul {
-  list-style-type: square;
-  padding-left: 20px;
-  font-size: var(--font-size-base);
-  color: #555;
-}
 
 .download-cv {
   margin-top: 20px;

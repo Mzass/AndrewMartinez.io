@@ -207,7 +207,7 @@ textarea[readonly] {
 textarea[readonly] {
   resize: none;
   overflow: hidden;
-  height: 90px;
+  height: 100px;
 }
 
 .form-row {
